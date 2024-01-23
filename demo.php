@@ -1,12 +1,9 @@
-Salut les gens
 <?php
-$note = 10;
-$note2 = 15;
-echo ($note + $note2) / 2;
-echo "\n";
 $prenom = 'Marc';
 $nom = 'Doe';
-echo $prenom . "\n" . $nom;
-?>
+$note1 = 10;
+$note2 = 20;
+$moyenne = ('$note1 + $note2') / 2;
 
-Comment ça va?
+echo 'Bonjour' . $prenom . ' ' . $nom . 'vous avez eu' . (('$note1 + $note2') / 2) . ' de moyenne';
+echo "\nBonjour $prenom $nom vous avez eu $moyenne de moyenne";
