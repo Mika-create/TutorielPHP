@@ -1,5 +1,4 @@
 <?php
-if (!function_exists('nav_item')) {
 
     function nav_item (string $lien, string $titre, string $linkClass = ''): string 
     {
@@ -13,8 +12,11 @@ if (!function_exists('nav_item')) {
             </li>
 HTML;
     }
+
+function nav_menu (string $linkClass = ''): string
+{
+    return
+        nav_item('/index.php', 'Accueil', $linkClass) . 
+        nav_item('/contact.php', 'Contact', $linkClass);
 }
 ?>
-
-<?= nav_item('/index.php', 'Accueil', $class); ?>
-<?= nav_item('/contact.php', 'Contact', $class); ?>
