@@ -8,7 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
-    <title><?php echo $title; ?></title>
+    <title>
+        <?php if (isset($title)): ?>
+           <?= $title ?>
+        <?php else: ?>
+            Mon site
+        <?php endif ?>
+    </title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -23,22 +29,7 @@
     <meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c">
 
-            <style>
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-                }
-            }
-            </style>
+            
 
 <link href="starter-template.css" rel="stylesheet">
   
@@ -54,7 +45,7 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/index.php">Accueil<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/index.php">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact.php">Contact</a>
