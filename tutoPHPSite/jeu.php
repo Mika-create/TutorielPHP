@@ -27,10 +27,11 @@ require 'header.php';
 <?php endif ?>    
 
 
-<form action="/jeu.php" method="GET">
-     <input type="number" name="chiffre" placeholder="entre 0 et 1000" value="<?= $value ?>">
-     <input type="text" name="demo" value="test">
-     <button type="submit">Deviner</button>
+<form action="/jeu.php" method="POST">
+    <div class="form-group">
+       <input type="number" class="form-control" name="chiffre" placeholder="entre 0 et 1000" value="<?= $value ?>">
+    </div> 
+    <button type="submit" class="btn btn-primary">Deviner</button>
 </form>    
 
 
