@@ -53,8 +53,24 @@ require 'header.php';
         <?php foreach($parfums as $parfum => $prix): ?>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" name="parfum[]" value="<?= $parfum ?>">
+                    <? checkbox('parfum', $parfum,$_GET) ?>
                     <?= $parfum ?> - <?= $prix ?> €
+                </label>
+            </div>
+        <?php endforeach; ?>
+        <?php foreach($cornets as $cornet => $prix): ?>
+            <div class="checkbox">
+                <label>
+                    <? radio('cornet', $cornet,$_GET) ?>
+                    <?= $cornet ?> - <?= $prix ?> €
+                </label>
+            </div>
+        <?php endforeach; ?>
+        <?php foreach($supplements as $supplement => $prix): ?>
+            <div class="checkbox">
+                <label>
+                    <? checkbox('supplement', $supplement,$_GET) ?>
+                    <?= $supplement ?> - <?= $prix ?> €
                 </label>
             </div>
         <?php endforeach; ?>
