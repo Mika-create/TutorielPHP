@@ -41,3 +41,4 @@ function radio (string $name, string $value, array $data): string
     <input type="radio" name="{$name}" value="$value">
 HTML;   
 }
+?>
