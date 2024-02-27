@@ -8,9 +8,10 @@ define('JOURS', [
     'Samedi',
     'Dimanche'
 ]);
+
 define('CRENEAUX', [
     [
-        [8, 12],
+        [8, 11],
         [14, 19]
     ],
     [
