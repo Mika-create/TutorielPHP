@@ -51,9 +51,16 @@ function dump($variable)
 
 function creneaux_html(array $creneaux)
 {
+    if (empty($creneaux)) {
+        return 'Fermé';
+    }
     $phrases = [];
     foreach ($creneaux as $creneau) {
         $phrases[] = "de {$creneau[0]}h à {$creneau[1]}h";
     }
-    return 'Ouvert de ' . implode(' et ', $phrases);
+    return 'Ouvert ' . implode(' et ', $phrases);
+}
+
+function in_creneaux(int $heure, array $creneaux): bool
+{
 }
