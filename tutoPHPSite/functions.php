@@ -42,6 +42,15 @@ function radio(string $name, string $value, array $data): string
 HTML;
 }
 
+function select(string $name, $value, array $options): string
+{
+    foreach ($options as $k => $option) {
+        $attributes = $k == $value ? ' selected' : '';
+        $html_options[] = "<option value='$k' $attributes>$option</option>";
+    }
+    return "<select class='form-control' name='$name'>" . implode($html_options) . '</select>';
+}
+
 function dump($variable)
 {
     echo '<pre>';
