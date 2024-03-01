@@ -1,6 +1,32 @@
 <?php
+require_once 'functions.php';
+$title = "Notre menu";
+$lignes = file(__DIR__ . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'menu.tsv');
+foreach ($lignes as $k => $ligne) {
+    $lignes[$k] = explode("\t", trim($ligne));
+}
 require 'elements/header.php';
 ?>
+
+<h1>Menu</h1>
+
+<?php foreach ($lignes as $ligne) : ?>
+    <?php if (count($ligne) === 1) : ?>
+        <h2><?= $ligne[0]; ?></h2>
+    <?php else : ?>
+        <div class="row">
+            <div class="col-sm-8">
+                <p>
+                    <strong><?= $ligne[0]; ?></strong><br>
+                    <?= $ligne[1]; ?>
+                </p>
+            </div>
+            <div class="clo-sm-4">
+                <?= $ligne[2]; ?> €
+            </div>
+        </div>
+    <?php endif; ?>
+<?php endforeach ?>
 
 <?php
 require 'elements/footer.php';
