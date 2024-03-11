@@ -5,6 +5,7 @@ $lignes = file(__DIR__ . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'm
 foreach ($lignes as $k => $ligne) {
     $lignes[$k] = explode("\t", trim($ligne));
 }
+dump($lignes);
 require 'elements/header.php';
 ?>
 
