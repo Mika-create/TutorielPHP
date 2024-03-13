@@ -1,7 +1,7 @@
 <?php
 $title = "Nous contacter";
 $nav = "contact";
-require_once 'config.php';
+require_once 'data/config.php';
 require_once 'functions.php';
 date_default_timezone_set('Europe/Paris');
 // Récupérer l'heure d'aujourd'hui $heure
@@ -17,7 +17,7 @@ $color = $ouvert ? 'green' : 'red';
 // } else {
 //     $color = 'red';
 // }
-require 'header.php';
+require 'elements/header.php';
 ?>
 
 <div class="row">
@@ -61,4 +61,4 @@ require 'header.php';
     </div>
 </div>
 
-<?php require 'footer.php'; ?>
+<?php require 'elements/footer.php'; ?>
