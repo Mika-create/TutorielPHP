@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = "Nous contacter";
 $nav = "contact";
 require_once 'data/config.php';
@@ -22,6 +23,10 @@ require 'elements/header.php';
 
 <div class="row">
     <div class="col-md-8">
+        <h2>Debug</h2>
+        <pre>
+            <?php var_dump($_SESSION); ?>
+        </pre>
         <h2>Nous contacter</2>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae excepturi consequatur eius architecto nesciunt enim doloremque, temporibus eligendi dolorem velit ullam odio dolor aperiam laboriosam ipsum asperiores praesentium, autem optio!
